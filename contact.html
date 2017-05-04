@@ -1,0 +1,155 @@
+<!DOCTYPE = html>
+<html lang = "en">
+<head>
+
+	<meta name = "author" content = "Ameeshi Goel">  
+	<meta name = "keywords" content = "Carnegie Mellon University, CV">
+	<meta name = "descrption" content = "Ameeshi Goel Professional Website">
+
+	<title> Ameeshi Goel CV </title>
+    <link rel = "stylesheet" media = "all" type = "text/css" href = "css/styles.css">
+
+    <script type = "text/javascript" src = "js/jquery-3.2.0.min.js"> </script> 
+    <script type = "text/javascript" src = "js/scripts.js"> </script> 
+
+    <script src = "http://code.highcharts.com/highcharts.js"></script>
+    <script src = "http://code.highcharts.com/modules/exporting.js"></script>
+
+    <script type = "text/javaScript"> 
+		$(function() {
+			$('#container-graph').highcharts({
+				title: {
+        			text: 'Weekly Workload by Month'
+   				 },
+			    subtitle: {
+			        text: 'Hours per week of work from 2013-2016'
+			    },
+			    yAxis: {
+			        title: {
+			            text: 'Average hours worked each week'
+			        }
+			    },
+			    xAxis: {
+			    	title: {
+			    		text: 'Months'
+			    	},
+			    	categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+			    },
+			    legend: {
+			        layout: 'vertical',
+			        align: 'right',
+			        verticalAlign: 'middle'
+			    },
+			    series: [{
+			        name: '2013',
+			        data: [24, 12, 12, 3, 13, 24, 29, 29, 32, 30, 38, 40]
+			    }, {
+			        name: '2014',
+			        data: [11, 17, 16, 19, 20, 24, 12, 13, 12, 32, 39, 25]
+			    }, {
+			        name: '2015',
+			        data: [20, 20, 7.88, 12.169, 15.112, 22, 34, 34, 12, 23, 0, 6]
+			    }, {
+			        name: '2016',
+			        data: [12.908, 29.48, 8.105, 11.248, 8.989, 11.816, 18.274, 18.111, 17, 16, 12, 13]
+			    }]
+
+			});
+		});
+	</script>
+
+</head>
+
+<body> 
+    
+	<div id = "container">
+    
+    	<div id = "top_row">
+			<header> 
+				<h1> Ameeshi Goel </h1> 
+				<h2> Carnegie Mellon University, Information Systems Program </h2>
+			</header>
+
+			<nav>
+				<a href = "index.html"> About </a> 
+				<a href = "project.html"> Projects </a> 
+				<a href = "contact.html" class = "selected"> Contact </a> 
+			</nav>
+			
+		</div>
+
+
+	<div id = "content"> 
+		<h3> Contact </h3> 
+		<p> Please use the below map to find me. </p> 
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3036.418100088508!2d-79.94418068493688!3d40.44388226191233!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8834f223e2a39a91%3A0xde4e97a9478f1891!2s5000+Forbes+Ave%2C+Pittsburgh%2C+PA+15213!5e0!3m2!1sen!2sus!4v1490073486374" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+		<br>
+
+		<p> Please check to see when I'm free. </p> 
+
+		<div id = "container-graph"> </div> 
+
+		<br>
+
+		<form onsubmit = "return validate()"> 
+		Please use the below form to get in touch with me. <br/> <br/>
+			<fieldset> 
+				<legend> Tell Me More About Yourself.. </legend>
+				<label for = "uname"> Name: </label> <br/>
+				<input type = "text" id = "uname" name ="Name:" size = "20" maxlength = "250" value = "Your Name"> <br/> </br>
+				<label for = "txtDate"> Your Date of Birth: </label> <br/>
+				<input type = "date" name = "Your Date of Birth" id = "txtDate" required> <br/> <br/>
+			</fieldset>
+
+			<fieldset>
+				<legend> Tell Me About Your Preferences.. </legend> 
+				<label for = "colour"> Your favorite flower color </label> <br/>
+				<input type = "color" value = "#FF0000" id = "colour"> <br/> <br/>
+				<label for = "msg"> Message: </label> <br/>
+				<textarea rows = "10" cols = "50" maxlength = "1000" id = "msg"> </textarea> <br/> <br/>
+			</fieldset>
+
+			<fieldset>
+				<legend> Let's Stay In Touch.. </legend> 
+				<label for = "slect"> How did you find out about me? </label> <br>
+				<select id = "slect"> 
+					<option value = "Google"> Google </option>
+					<option value = "News Article"> News Article </option>
+				    <option value = "Friend"> Friend </option>
+				    <option value = "Other"> Other </option>
+				</select> <br/> <br/>
+				<label for = "blah"> Please indicate if you want to receive news updates via email </label> <br/> 
+				<input type = "checkbox" name = "Yes, Please update me!" id = "blah"> Yes, Please update me! <br/> <br/>
+				<label for = "emailid"> Please provide your email address </label> <br/> 
+				<input type = "email" placeholder = "abc@defg.com" id = "emailid"> <br/> <br/>
+				<label for = "phone"> Please provide your phone number </label> <br>
+				<input type = "text" id = "phone" required> <br> <br> 
+				<label for = "pwd"> Choose a Password </label> <br/> 
+				<input type = "password" maxlength = "20" id = "pwd"> <br/> <br/>
+			</fieldset> 
+			<fieldset>
+				<input type = "image" src = "images/submit.png" alt = "submit">
+			</fieldset>
+		</form>
+	</div>
+
+	<div id = "sidebar"> 
+    	<h3> Find Me </h3> 
+    	Ameeshi Goel </br> 
+    	<a href = "http://www.cmu.edu" target = "_blank"> Carnegie Mellon University </a> <br/>
+    	5000 Forbes Avenue <br/> 
+    	Pittsburgh, PA 15213 <br/> 
+    	412-425-0142 (c) <br/> 
+    	<a href = "mailto:ameeshig@andrew.cmu.edu"> <img src = "images/email.png"> </a>
+    	<a href = "https://www.facebook.com/ameeshigoel"> <img src = "images/facebook.png"> </a>
+    	<a href = "https://www.linkedin.com/in/ameeshi"> <img src = "images/linkedin.png"> </a>
+	</div> 
+
+	<footer> 
+		&copy; Ameeshi Goel 2017 <br/> 
+	</footer> 
+
+</div>
+</body> 
+
+</html> 
